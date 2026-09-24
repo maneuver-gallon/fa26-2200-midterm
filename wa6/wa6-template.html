@@ -20,8 +20,8 @@
             --color-text-light: white;
 
             /* Typography */
-            --font-primary: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
-            --font-secondary: 'Roboto Mono', monospace;
+            --font-primary: 'Josefin Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-secondary: 'Libre Baskerville', serif;
 
             /* Spacing System */
             --spacing-xs: 0.25rem;
@@ -78,11 +78,13 @@
         }
 
         .body-text {
+            font-family: var(--font-secondary);
             font-size: 1rem;
             margin-bottom: var(--spacing-md);
         }
 
         .small-text {
+            font-family: var(--font-secondary)
             font-size: 0.75rem;
             color: color-mix(in srgb, var(--color-text-dark) 70%, transparent);
         }
@@ -157,8 +159,11 @@
             height: 50px;
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
-</head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    </head>
 <body>
     <div class="container">
         <h1>Design System Template</h1>
@@ -196,9 +201,9 @@
 
         <section>
             <h2>Typography</h2>
-            <h1>Heading 1 - Space Grotesk</h1>
-            <h2>Heading 2 - Space Grotesk</h2>
-            <h3>Heading 3 - Space Grotesk</h3>
+            <h1>Heading 1 - Josefin Sans</h1>
+            <h2>Heading 2 - Josefin Sans</h2>
+            <h3>Heading 3 - Josefin Sans</h3>
             <p class="body-text">Body Text - Using Space Grotesk with a comfortable line height and readable size.</p>
             <p class="small-text">Small Text - Subtle and understated, perfect for annotations and footnotes.</p>
         </section>
