@@ -6,24 +6,7 @@
     <title>3D Printers | BTU Lab</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../BannerCubes/cube-hero.css">
-    <style>
-        .page-info { padding: 0 8px; }
-        .page-info img { max-width: 100%; height: auto; }
-
-        .shop {
-            display: block;
-            width: 100%;
-            height: auto;
-            margin: 1rem 0 0;
-        }
-        .shop-caption {
-            margin: .6rem 0 1.5rem;
-            color: #77736c;
-            font-size: .8rem;
-            letter-spacing: .14em;
-            text-transform: uppercase;
-        }
-    </style>
+    <link rel="stylesheet" href="../../css/styles.css">
 </head>
 <body>
 <nav class="nav" aria-label="Main">
@@ -47,11 +30,10 @@
   </ul>
 </nav>
 
-    <main class="page-info">
-        <img class="shop" src="../../images/3d-printers-animation.gif" alt="Line drawing of the BTU 3D printing area: a rack of filament spools, three Prusa MK4 printers in lit enclosures printing the purple letters B, T and U layer by layer, four Prusa MINI printers, a computer running the slicer, and shelves of finished prints" width="1800" height="435">
-        <p class="shop-caption">Prusa MK4 &middot; Prusa MK3S+ &middot; Prusa MINI &middot; PLA &amp; ABS filament &middot; Prusa Slicer</p>
-        <p>
-            3D Printing equipment and materials are labeled PURPLE.
+<img class="shop" src="../../images/3d-printers-animation.gif" alt="Line drawing of the BTU 3D printing area: a rack of filament spools, three Prusa MK4 printers in lit enclosures printing the purple letters B, T and U layer by layer, four Prusa MINI printers, a computer running the slicer, and shelves of finished prints" width="1800" height="435">
+    <main class="page-content tool-page">
+        <p class="color-intro c-printers">
+            3D Printing equipment and materials are labeled <span class="color-word c-printers">PURPLE</span>.
         </p>
         <p>
             <strong>FACULTY:</strong> Class assignments requiring 3D printing should be coordinated by LAs,
@@ -107,6 +89,53 @@
             something in return.
         </p>
     </main>
+
+<footer class="site-footer c-printers">
+  <div class="site-footer-inner">
+    <div>
+      <h2>Visit</h2>
+      <address>
+        BTU Lab<br>
+        320 UCB<br>
+        1125 18th St<br>
+        Boulder, CO 80309
+      </address>
+      <p><a href="https://www.google.com/maps/search/?api=1&amp;query=320%20UCB%2C%201125%2018th%20St%2C%20Boulder%2C%20CO%2080309" target="_blank" rel="noopener noreferrer">Open in Google Maps</a></p>
+    </div>
+    <nav aria-label="Site">
+      <h2>BTU Lab</h2>
+      <ul>
+          <li><a href="../home.html">Home</a></li>
+          <li><a href="../calendarworkshops.html">Calendar &amp; Workshops</a></li>
+          <li><a href="../rules.html">Lab Rules &amp; Policies</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Explore the Lab">
+      <h2>Explore the Lab</h2>
+      <ul class="footer-columns">
+          <li><a href="tools.html">Tools</a></li>
+          <li><a href="wood-shop.html">Wood Shop</a></li>
+          <li><a href="sewing-textiles.html">Sewing &amp; Textiles</a></li>
+          <li><a href="electronics.html">Electronics</a></li>
+          <li><a href="lasers.html">Lasers</a></li>
+          <li><a href="3d-printers.html" aria-current="page">3D Printers</a></li>
+          <li><a href="cnc.html">CNC</a></li>
+      </ul>
+    </nav>
+    <div>
+      <h2>Follow</h2>
+      <a class="footer-instagram" href="https://www.instagram.com/btulab_cu/" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2.75" y="2.75" width="18.5" height="18.5" rx="5.1"></rect>
+          <circle cx="12" cy="12" r="4.25"></circle>
+          <circle cx="17.6" cy="6.5" r="1" fill="currentColor" stroke="none"></circle>
+        </svg>
+        <span>@btulab_cu</span>
+      </a>
+    </div>
+  </div>
+  <p class="site-footer-bottom">ATLAS Institute &middot; University of Colorado Boulder</p>
+</footer>
 
 <script src="../../BannerCubes/cube-hero.js" defer></script>
 </body>
