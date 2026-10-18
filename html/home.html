@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BTU Lab</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet">
     <link rel="stylesheet" href="../BannerCubes/cube-hero.css">
+    <link rel="stylesheet" href="../css/styles.css">
     <style>
         .page-info { padding: 0 8px; }
     </style>
@@ -43,87 +45,122 @@
 
   <div class="content">
     <h1>Blow. Things. Up.</h1>
-    <p><span class="hint-pointer">Move your cursor</span><span class="hint-touch">Drag your finger</span> across the grid and watch the cubes roll over.</p>
   </div>
 </header>
 
 <nav class="nav" aria-label="Main">
   <ul>
-    <li><a href="#home" aria-current="page">Home</a></li>
+    <li><a href="home.html" aria-current="page">Home</a></li>
+
     <li class="dropdown">
-      <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="tools-menu">Tools <span class="caret" aria-hidden="true">&#9662;</span></button>
+      <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="tools-menu">
+        Explore the Lab <span class="caret" aria-hidden="true">&#9662;</span>
+      </button>
+
       <ul class="dropdown-menu" id="tools-menu">
-        <li><a href="#wood-shop">Wood Shop</a></li>
-        <li><a href="#sewing-textiles">Sewing &amp; Textiles</a></li>
-        <li><a href="#electronics">Electronics</a></li>
-        <li><a href="#lasers">Lasers</a></li>
-        <li><a href="#3d-printers">3D Printers</a></li>
-        <li><a href="#cnc">CNC</a></li>
+        <li><a href="WhatWeUse/tools.html">Tools</a></li>
+        <li><a href="WhatWeUse/wood-shop.html">Wood Shop</a></li>
+        <li><a href="WhatWeUse/sewing-textiles.html">Sewing &amp; Textiles</a></li>
+        <li><a href="WhatWeUse/electronics.html">Electronics</a></li>
+        <li><a href="WhatWeUse/lasers.html">Lasers</a></li>
+        <li><a href="WhatWeUse/3d-printers.html">3D Printers</a></li>
+        <li><a href="WhatWeUse/cnc.html">CNC</a></li>
       </ul>
     </li>
+
     <li><a href="#mischief-makers">BTU Mischief Makers</a></li>
     <li><a href="#btu-lab">BTU Lab</a></li>
-    <li><a href="#calendar">Calendar</a></li>
+    <li><a href="calendarworkshops.html">Calendar</a></li>
   </ul>
 </nav>
 
-    <header class="page-info">
-        <p> 
-            The ATLAS BTU Lab is an inclusive community makerspace facilitating 
+<main class="page-content" id="btu-lab">
+  <p class="page-intro">The ATLAS BTU Lab is an inclusive community makerspace facilitating 
             projects at the intersection of Art, Design, Engineering and Architecture. 
-            It serves multiple functions as a general workspace, and workshop host. 
-        </p>
-        <h2>
-            WHO?
-        </h2>
-        <h4>
-            Anyone* can gain access to BTU. Our goal is to provide the most diverse, 
+            It serves multiple functions as a general workspace, and workshop host.</p>
+
+  <section class="info-list" aria-label="BTU Lab information">
+    <article class="info-card info-card--image-right">
+      <img class="info-photo" src="../images/home-2.jpg" alt="Group of students spending time in the makerspace" loading="lazy">
+      <div class="info-body">
+        <h2>WHO?</h2>
+        <p>Anyone* can gain access to BTU. Our goal is to provide the most diverse, 
             inclusive environment for makers of all types in a highly experimental 
-            and productive space.
-        </h4>
-        <p>
-            *Due to increased campus security, we are currently unable to sponsor BuffOne Guest cards.
-        </p>
-        <h2>
-            HOW?
-        </h2>
-        <h4>
-            New members attend a 20 minute general orientation covering community expectations, 
-            safety and equipment.
-        </h4>
-        <h2>
-            WHEN?
-        </h2>
-        <h4>
-            The orientation* schedule, and all scheduled events can be found on the BTU Calendar. 
-        </h4>
-        <p>
-            [*Some things involve separate orientations...
-            like lasers and stuff. Check the calendar and the pages above for your interests.]
-        </p>
-        <h2>
-            Uh..WHAT? 
-        </h2>
-        <h4>
-            Questions: email BTU Lab at atlasbtulab@gmail.com. 
-        </h4>
-    </header>
-    <table border="1">
-       <tr>
-           <td width="150" height="150">Tools</td>
-           <td width="150" height="150">Wood Shop</td>
-           <td width="150" height="150">Sewing and Textiles</td>
-       </tr>
-       <tr>
-           <td width="150" height="150">Electronics</td>
-           <td width="150" height="150">Lasers!</td>
-           <td width="150" height="150">3D Printers</td>
-       </tr>
-       <tr>
-           <td width="150" height="150">CNC</td>
-       </tr>
-   </table>
+            and productive space.</p>
+          <p class="note">*Due to increased campus security, we are currently unable to sponsor BuffOne Guest cards.</p>
+      </div>
+    </article>
+    <article class="info-card" id="calendar">
+      <img class="info-photo" src="../images/home-3.jpg" alt="Student wearing protective equipment while working in a shop" loading="lazy">
+      <div class="info-body">
+        <h2>WHEN?</h2>
+        <p>The orientation* schedule, and all scheduled events can be found on the BTU Calendar.</p>
+          <p class="note">[*Some things involve separate orientations...
+            like lasers and stuff. Check the calendar and the pages above for your interests.]</p>
+      </div>
+    </article>
+    <article class="info-card info-card--image-right">
+      <img class="info-photo" src="../images/home-4.jpg" alt="Students gathering and working at makerspace tables" loading="lazy">
+      <div class="info-body">
+        <h2>HOW?</h2>
+        <p>New members attend a 20 minute general orientation covering community expectations, 
+            safety and equipment.</p>
+      </div>
+    </article>
+    <article class="info-card">
+      <img class="info-photo" src="../images/home-5.jpg" alt="Students collaborating on an interactive floor project" loading="lazy">
+      <div class="info-body">
+        <h2>Uh..WHAT?</h2>
+        <p>Questions: email BTU Lab at atlasbtulab@gmail.com.</p>
+      </div>
+    </article>
+  </section>
+
+  <section class="explore-section" aria-labelledby="explore-title">
+    <h2 id="explore-title">Explore the Lab</h2>
+    <div class="explore-grid">
+      <a class="explore-card" href="tools.html">Tools</a>
+      <a class="explore-card" href="wood-shop.html">Wood Shop</a>
+      <a class="explore-card" href="sewing-textiles.html">Sewing and Textiles</a>
+      <a class="explore-card" href="electronics.html">Electronics</a>
+      <a class="explore-card" href="lasers.html">Lasers!</a>
+      <a class="explore-card" href="3d-printers.html">3D Printers</a>
+      <a class="explore-card" href="cnc.html">CNC</a>
+    </div>
+  </section>
+  <section class="where-section" id="where" aria-labelledby="where-title">
+    <h2 class="where-title" id="where-title">And, finally... <strong>WHERE?</strong></h2>
+    <div class="where-card">
+      <div class="where-map">
+        <iframe title="Google map showing BTU Lab at 320 UCB, 1125 18th St, Boulder" src="https://www.google.com/maps?q=320%20UCB%2C%201125%2018th%20St%2C%20Boulder%2C%20CO%2080309&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+      <div class="where-info">
+        <address class="where-address">
+          <span>320 UCB</span>
+          <span>1125 18th St</span>
+          <span>Boulder, CO 80309</span>
+        </address>
+        <a class="map-directions" href="https://www.google.com/maps/search/?api=1&amp;query=320%20UCB%2C%201125%2018th%20St%2C%20Boulder%2C%20CO%2080309" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="social-links">
+    <a class="instagram-link" href="https://www.instagram.com/btulab_cu/" target="_blank" rel="noopener noreferrer" aria-label="BTU Lab on Instagram">
+      <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2.75" y="2.75" width="18.5" height="18.5" rx="5.1"></rect>
+        <circle cx="12" cy="12" r="4.25"></circle>
+        <circle cx="17.6" cy="6.5" r="1" fill="currentColor" stroke="none"></circle>
+      </svg>
+    </a>
+  </div>
+
+  <section class="materials-section" aria-label="Materials disclaimer">
+    <p>Materials: <strong>BTU LAB IS NOT A FREE SUPPLY STORE.</strong> But there are many ways to barter, including displaying your work in BTU, tagging us in social media, offering workshops, volunteering to organize supplies, and more. If you need something, we ask that you give something in return.</p>
+  </section>
+</main>
 
 <script src="../BannerCubes/cube-hero.js" defer></script>
+<script src="../js/site.js" defer></script>
 </body>
 </html>

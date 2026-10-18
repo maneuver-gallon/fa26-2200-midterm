@@ -1,0 +1,208 @@
+.page-content, .page-content * { box-sizing: border-box; }
+.page-content {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 52px 24px 80px;
+  font-family: "Lato", Arial, sans-serif;
+  color: #252525;
+}
+.page-intro {
+  max-width: 810px;
+  margin: 0 auto 48px;
+  padding-left: 20px;
+  border-left: 3px solid #b9b9b9;
+  font-size: 1.12rem;
+  line-height: 1.8;
+}
+
+/* WHO / WHEN / HOW / WHAT. */
+.info-list { display: grid; gap: 24px; }
+.info-card {
+  display: flex;
+  min-height: 282px;
+  overflow: hidden;
+  border: 1px solid #dedede;
+  border-radius: 8px;
+  background: #fff;
+  transition: box-shadow .18s ease;
+}
+.info-card:hover { box-shadow: 0 5px 22px rgba(0,0,0,.07); }
+.info-photo {
+  width: 46%;
+  min-height: 282px;
+  object-fit: cover;
+  display: block;
+}
+.info-card--image-right .info-photo { order: 2; }
+.info-body {
+  flex: 1;
+  min-width: 0;
+  padding: 34px clamp(24px, 4vw, 50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.info-body h2 {
+  margin: 0 0 17px;
+  font-size: clamp(1.45rem, 2.4vw, 1.9rem);
+  font-weight: 700;
+  letter-spacing: .02em;
+}
+.info-body p { margin: 0; line-height: 1.75; font-size: 1.02rem; }
+.info-body .note {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid #e5e5e5;
+  color: #555;
+  font-size: .88rem;
+  line-height: 1.6;
+}
+
+/* Explore the labs sections */
+.explore-section { margin-top: 70px; }
+.explore-section h2 {
+  margin: 0 0 22px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #dedede;
+  font-size: 1.65rem;
+}
+.explore-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; }
+.explore-card {
+  box-sizing: border-box;
+  flex: 0 0 calc((100% - 48px) / 4);
+  min-height: 138px;
+  padding: 20px;
+  border: 1px solid #d8d8d8;
+  border-radius: 6px;
+  background: #fff;
+  color: #252525;
+  font-size: 1.08rem;
+  font-weight: 700;
+  line-height: 1.35;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  transition: background-color .18s ease, border-color .18s ease, transform .18s ease;
+}
+.explore-card:hover { background: #f7f7f7; border-color: #999; transform: translateY(-2px); }
+.explore-card:focus-visible, .page-content a:focus-visible { outline: 2px solid #333; outline-offset: 3px; }
+
+/* The new category pages are ready for content; no placeholder claims added. */
+.subpage .nav { margin-bottom: 0; }
+.subpage-content { min-height: 60vh; padding-top: 70px; }
+.breadcrumb { margin: 0 0 24px; font-size: .9rem; color: #555; }
+.breadcrumb a, .back-link a { color: inherit; }
+.subpage-title { margin: 0 0 35px; font-size: clamp(2rem, 3.8vw, 3.2rem); }
+.empty-page-space { min-height: 180px; border-top: 1px solid #ddd; }
+.back-link { margin-top: 8px; }
+
+/* Preserve the existing Tools dropdown appearance; enable click toggling. */
+.nav .dropdown-menu.site-menu-open { display: block; visibility: visible; opacity: 1; }
+
+@media (max-width: 950px) {
+  .explore-card { flex-basis: calc((100% - 32px) / 3); }
+  .info-photo { width: 44%; }
+  .info-body { padding: 27px; }
+}
+@media (max-width: 700px) {
+  .page-content { padding: 34px 18px 56px; }
+  .page-intro { margin-bottom: 32px; font-size: 1.04rem; }
+  .info-list { gap: 18px; }
+  .info-card { display: flex; flex-direction: column; min-height: 0; }
+  .info-photo, .info-card--image-right .info-photo {
+    width: 100%;
+    height: 230px;
+    min-height: 0;
+    order: 0;
+  }
+  .info-body { order: 1; padding: 24px; }
+  .info-body h2 { margin-bottom: 12px; }
+  .explore-section { margin-top: 50px; }
+  .explore-card { flex-basis: calc((100% - 16px) / 2); min-height: 116px; }
+  .subpage-content { padding-top: 42px; }
+}
+@media (max-width: 340px) {
+  .explore-card { flex-basis: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .info-card, .explore-card { transition: none; }
+}
+
+
+/* WHERE + footer: neutral and intentionally simple. */
+.where-section { margin-top: 76px; }
+.where-title {
+  margin: 0 0 26px;
+  font-size: clamp(1.8rem, 3vw, 2.35rem);
+  font-weight: 400;
+  letter-spacing: -.015em;
+}
+.where-title strong { font-weight: 700; }
+.where-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(260px, .8fr);
+  overflow: hidden;
+  border: 1px solid #dedede;
+  border-radius: 8px;
+  background: #f7f7f7;
+}
+.where-map { min-width: 0; min-height: 350px; background: #ebebeb; }
+.where-map iframe { display: block; width: 100%; height: 100%; min-height: 350px; border: 0; }
+.where-info {
+  min-width: 0;
+  padding: 36px clamp(26px, 4vw, 48px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.where-address {
+  font-style: normal;
+  font-size: clamp(1.4rem, 2.35vw, 1.9rem);
+  font-weight: 700;
+  line-height: 1.5;
+}
+.where-address span { display: block; }
+.map-directions { margin-top: 28px; color: #333; font-size: .97rem; text-underline-offset: 4px; }
+.social-links { display: flex; justify-content: center; margin: 34px 0; }
+.instagram-link {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d5d5d5;
+  border-radius: 50%;
+  background: #fff;
+  color: #333;
+  text-decoration: none;
+  transition: background-color .18s ease, transform .18s ease;
+}
+.instagram-link:hover { background: #f2f2f2; transform: translateY(-2px); }
+.materials-section {
+  padding: clamp(25px, 4vw, 42px);
+  border: 1px solid #dedede;
+  border-radius: 8px;
+  background: #f4f4f4;
+}
+.materials-section p {
+  max-width: 960px;
+  margin: 0 auto;
+  font-size: clamp(1.04rem, 1.7vw, 1.2rem);
+  line-height: 1.8;
+}
+.materials-section strong { font-weight: 700; }
+.instagram-link:focus-visible, .map-directions:focus-visible { outline: 2px solid #333; outline-offset: 4px; }
+@media (max-width: 740px) {
+  .where-section { margin-top: 58px; }
+  .where-card { grid-template-columns: 1fr; }
+  .where-map, .where-map iframe { min-height: 295px; }
+  .where-info { padding: 27px 25px 32px; }
+  .map-directions { margin-top: 18px; }
+  .social-links { margin: 26px 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .instagram-link { transition: none; }
+}
