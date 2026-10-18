@@ -1,4 +1,4 @@
-// This file only manages the existing Tools dropdown.
+// This file only manages the existing whatWeUse dropdown.
 (() => {
   const toolsButton = document.querySelector(".nav .dropdown-toggle");
   const toolsMenu = document.querySelector(".nav .dropdown-menu");
