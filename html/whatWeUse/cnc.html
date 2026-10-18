@@ -1,15 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>CNC | BTU Lab</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CNC | BTU Lab</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../BannerCubes/cube-hero.css">
+    <style>
+        .page-info { padding: 0 8px; }
+        .page-info img { max-width: 100%; height: auto; }
 
-  <link rel="stylesheet" href="../../BannerCubes/cube-hero.css">
-  <link rel="stylesheet" href="../../css/styles.css">
+        .shop {
+            display: block;
+            width: 100%;
+            height: auto;
+            margin: 1rem 0 0;
+        }
+        .shop-caption {
+            margin: .6rem 0 1.5rem;
+            color: #77736c;
+            font-size: .8rem;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+        }
+    </style>
 </head>
-<body class="subpage">
+<body>
 <nav class="nav" aria-label="Main">
   <ul>
     <li><a href="../home.html">Home</a></li>
@@ -22,20 +38,49 @@
         <li><a href="electronics.html">Electronics</a></li>
         <li><a href="lasers.html">Lasers</a></li>
         <li><a href="3d-printers.html">3D Printers</a></li>
-        <li><a href="cnc.html">CNC</a></li>
+        <li><a href="cnc.html" aria-current="page">CNC</a></li>
       </ul>
     </li>
-    <li><a href="#mischief-makers">BTU Mischief Makers</a></li>
-    <li><a href="index.html#btu-lab">BTU Lab</a></li>
-    <li><a href="index.html#calendar">Calendar</a></li>
+    <li><a href="../home.html#mischief-makers">BTU Mischief Makers</a></li>
+    <li><a href="../home.html#btu-lab">BTU Lab</a></li>
+    <li><a href="../calendarworkshops.html">Calendar</a></li>
   </ul>
 </nav>
-<main class="page-content subpage-content">
-  <p class="breadcrumb"><a href="index.html">Home</a> / CNC</p>
-  <h1 class="subpage-title">CNC</h1>
-  <div class="empty-page-space" aria-hidden="true"></div>
-  <p class="back-link"><a href="tools.html">← Tools</a></p>
-</main>
-<script src="../../js/site.js" defer></script>
+
+    <main class="page-info">
+        <img class="shop" src="../../images/cnc-animation.gif" alt="Line drawing of the BTU CNC area: a Shaper Origin handheld CNC router cutting the letters B, T and U in blue into a board on a workbench, with a plywood rack, pegboard of tools, shop vac, a monitor playing the tutorial video, and finished projects" width="1800" height="435">
+        <p class="shop-caption">Shaper Origin &middot; ShaperTape &middot; Router bits &middot; Plywood &middot; Inlays &amp; signs</p>
+        <h2>WE GOT ONE!</h2>
+        <p>
+            CNC equipment and materials are labeled BLUE.
+        </p>
+        <p>
+            <strong>FACULTY:</strong> Class assignments requiring Shaper CNC should be coordinated by LAs,
+            TAs, or instructors. (Questions: <a href="mailto:zack.weaver@colorado.edu">zack.weaver@colorado.edu</a>)
+        </p>
+        <p>
+            <strong>STUDENTS:</strong> Assistance with Shaper CNC for class assignments should be coordinated
+            with class LAs or TAs first, then "BTU Mischief Makers", if available.
+        </p>
+        <p>
+            <strong>EVERYBODY:</strong> A brief training is required before using the Shaper CNC.
+        </p>
+        <img src="../../images/cnc-2.jpg" alt="The Shaper Origin handheld CNC router with its case and accessories" width="640">
+
+        <h2>'Cause I'm C N C ...Dynamite!</h2>
+        <p>
+            Thanks to generous support BTU purchased a Shaper Origin CNC router in 2026!
+        </p>
+        <p>
+            Basic operation of the Shaper can be found here:
+            <a href="https://www.youtube.com/watch?v=QxjE5WOAGi4">www.youtube.com/watch?v=QxjE5WOAGi4</a>
+        </p>
+        <p>
+            The Shaper is a precision (expensive) tool! Please contact Zack at
+            <a href="mailto:zack.weaver@colorado.edu">zack.weaver@colorado.edu</a> to get started.
+        </p>
+    </main>
+
+<script src="../../BannerCubes/cube-hero.js" defer></script>
 </body>
 </html>

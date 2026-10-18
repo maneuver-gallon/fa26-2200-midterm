@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Electronics | BTU Lab</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../BannerCubes/cube-hero.css">
-  <link rel="stylesheet" href="../../css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronics | BTU Lab</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../BannerCubes/cube-hero.css">
+    <style>
+        .page-info { padding: 0 8px; }
+        .page-info img { max-width: 100%; height: auto; }
+
+        .shop {
+            display: block;
+            width: 100%;
+            height: auto;
+            margin: 1rem 0 0;
+        }
+        .shop-caption {
+            margin: .6rem 0 1.5rem;
+            color: #77736c;
+            font-size: .8rem;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+        }
+    </style>
 </head>
-<body class="subpage">
+<body>
 <nav class="nav" aria-label="Main">
   <ul>
     <li><a href="../home.html">Home</a></li>
@@ -18,23 +35,58 @@
         <li><a href="tools.html">Tools</a></li>
         <li><a href="wood-shop.html">Wood Shop</a></li>
         <li><a href="sewing-textiles.html">Sewing &amp; Textiles</a></li>
-        <li><a href="electronics.html">Electronics</a></li>
+        <li><a href="electronics.html" aria-current="page">Electronics</a></li>
         <li><a href="lasers.html">Lasers</a></li>
         <li><a href="3d-printers.html">3D Printers</a></li>
         <li><a href="cnc.html">CNC</a></li>
       </ul>
     </li>
-    <li><a href="#mischief-makers">BTU Mischief Makers</a></li>
-    <li><a href="index.html#btu-lab">BTU Lab</a></li>
-    <li><a href="index.html#calendar">Calendar</a></li>
+    <li><a href="../home.html#mischief-makers">BTU Mischief Makers</a></li>
+    <li><a href="../home.html#btu-lab">BTU Lab</a></li>
+    <li><a href="../calendarworkshops.html">Calendar</a></li>
   </ul>
 </nav>
-<main class="page-content subpage-content">
-  <p class="breadcrumb"><a href="index.html">Home</a> / Electronics</p>
-  <h1 class="subpage-title">Electronics</h1>
-  <div class="empty-page-space" aria-hidden="true"></div>
-  <p class="back-link"><a href="tools.html">← Tools</a></p>
-</main>
-<script src="../../js/site.js" defer></script>
+
+    <main class="page-info">
+        <img class="shop" src="../../images/electronics-animation.gif" alt="Line drawing of the BTU electronics benches: parts drawers on lit shelves, a pegboard of wire and tape, soldering stations, an oscilloscope showing a wave, a power supply, a soldering iron working on a circuit board in helping hands, and a robot arm on a cart" width="1800" height="435">
+        <p class="shop-caption">Solder irons &middot; Power supplies &middot; Oscilloscope &middot; Arduino &amp; Raspberry Pi &middot; UhhhhANDMORE!</p>
+        <p>
+            Electronics equipment is labeled... teal? Cyan? Turquoise? Aqua? Oh, lort...THIS COLOR!
+        </p>
+        <img src="../../images/electronics-2.jpg" alt="The electronics benches with soldering stations and parts bins" width="640">
+
+        <h2>With great power...</h2>
+        <p>
+            Electronics and coding training happens as requested by staff and/or community members. It is
+            also the subject of some ATLAS classes and BTU workshops. See workshops on the <a href="../calendarworkshops.html">BTU Lab Calendar</a>.
+        </p>
+        <p>
+            See the <a href="#mischief-makers">BTU Mischief Makers</a> page to contact one of our community experts to get you started.
+        </p>
+
+        <h2>Electronics Equipment &amp; Supplies</h2>
+        <ul>
+            <li>Solder Irons &amp; Accessories</li>
+            <li>Bench Top Power Supplies</li>
+            <li>Soldering Rework Station</li>
+            <li>Digital Oscilloscope</li>
+            <li>Arduino / Raspberry Pi ecosystem</li>
+            <li>Various Power Components (V=I*R stuff!)</li>
+            <li>Various Input Components</li>
+            <li>Various Output Components</li>
+            <li>LilyPad</li>
+            <li>Prototyping Supplies</li>
+            <li>UhhhhANDMORE!</li>
+        </ul>
+
+        <p>
+            <strong>Materials:</strong> BTU LAB IS NOT A FREE SUPPLY STORE. But there are many ways to barter,
+            including displaying your work in BTU, tagging us in social media, offering workshops,
+            volunteering to organize supplies, and more. If you need something, we ask that you give
+            something in return.
+        </p>
+    </main>
+
+<script src="../../BannerCubes/cube-hero.js" defer></script>
 </body>
 </html>

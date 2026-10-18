@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Wood Shop | BTU Lab</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../BannerCubes/cube-hero.css">
-  <link rel="stylesheet" href="../../css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wood Shop | BTU Lab</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../BannerCubes/cube-hero.css">
+    <style>
+        .page-info { padding: 0 8px; }
+        .page-info img { max-width: 100%; height: auto; }
+
+        .shop {
+            display: block;
+            width: 100%;
+            height: auto;
+            margin: 1rem 0 0;
+        }
+        .shop-caption {
+            margin: .6rem 0 1.5rem;
+            color: #77736c;
+            font-size: .8rem;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+        }
+    </style>
 </head>
-<body class="subpage">
+<body>
 <nav class="nav" aria-label="Main">
   <ul>
     <li><a href="../home.html">Home</a></li>
@@ -16,7 +33,7 @@
       <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="tools-menu">Explore the Lab <span class="caret" aria-hidden="true">&#9662;</span></button>
       <ul class="dropdown-menu" id="tools-menu">
         <li><a href="tools.html">Tools</a></li>
-        <li><a href="wood-shop.html">Wood Shop</a></li>
+        <li><a href="wood-shop.html" aria-current="page">Wood Shop</a></li>
         <li><a href="sewing-textiles.html">Sewing &amp; Textiles</a></li>
         <li><a href="electronics.html">Electronics</a></li>
         <li><a href="lasers.html">Lasers</a></li>
@@ -24,17 +41,95 @@
         <li><a href="cnc.html">CNC</a></li>
       </ul>
     </li>
-    <li><a href="#mischief-makers">BTU Mischief Makers</a></li>
-    <li><a href="index.html#btu-lab">BTU Lab</a></li>
-    <li><a href="index.html#calendar">Calendar</a></li>
+    <li><a href="../home.html#mischief-makers">BTU Mischief Makers</a></li>
+    <li><a href="../home.html#btu-lab">BTU Lab</a></li>
+    <li><a href="../calendarworkshops.html">Calendar</a></li>
   </ul>
 </nav>
-<main class="page-content subpage-content">
-  <p class="breadcrumb"><a href="index.html">Home</a> / Wood Shop</p>
-  <h1 class="subpage-title">Wood Shop</h1>
-  <div class="empty-page-space" aria-hidden="true"></div>
-  <p class="back-link"><a href="tools.html">← Tools</a></p>
-</main>
-<script src="../../js/site.js" defer></script>
+
+    <main class="page-info">
+        <img class="shop" src="../../images/wood-shop-animation.gif" alt="Line drawing of the BTU wood shop: a lumber rack, table saw, band saw, drill press, workbench with a chop saw, belt sander and dust collector, all running and throwing pink sparks" width="1800" height="435">
+        <p class="shop-caption">Table saw &middot; Band saw &middot; Drill press &middot; Chop saw &middot; Belt sander &middot; and so, so much more</p>
+        <p>
+            The WOOD SHOP entrance is marked PINK. Inside, tools have their own color-coding system.
+            You'll figure it out.
+        </p>
+        <p>
+            Access to certain machines is facilitated by BTU "Mischief Makers". Anyone can become a
+            "Mischief Maker" on any machine.
+        </p>
+        <p>
+            <strong>*WOOD SHOP access is separate from general BTU access and REQUIRES AN ORIENTATION.*</strong>
+        </p>
+        <p>
+            **FOR YOUR SAFETY, major equipment including table saw, band saw, belt sander, chop saw, and
+            drill press are powered off between the hours of 10pm and 6am, daily.
+        </p>
+        <img src="../../images/wood-shop-2.jpg" alt="A turned wooden goblet with a twisted stem, made in the wood shop" width="640">
+
+        <h2>Wood Shop Orientations</h2>
+        <h4>REGISTRATION IS REQUIRED! LINK ON THE CALENDAR.</h4>
+        <p>
+            The Wood Shop Orientation schedule can be found on the <a href="../calendarworkshops.html">BTU Lab Calendar</a>.
+            Orientations are run by the BTU Mischief Maker(s) listed on the <a href="#mischief-makers">BTU Mischief Makers</a> page.
+        </p>
+
+        <h2>Wood Shop Equipment</h2>
+        <ul>
+            <li>Table Saw**</li>
+            <li>Band Saw**</li>
+            <li>Drill Press**</li>
+            <li>Chop Saw**</li>
+            <li>Belt Sander**</li>
+            <li>Random Orbit Sander</li>
+            <li>Palm Router</li>
+            <li>Drills / Drivers</li>
+            <li>Hand Saws</li>
+            <li>Files</li>
+            <li>Measuring Tools</li>
+            <li>Other hand tools</li>
+            <li>Oh, and so, so much more my friends!</li>
+        </ul>
+
+        <h2>BTU Wood Shop Policies</h2>
+        <p>
+            **FOR YOUR SAFETY, major equipment including table saw, band saw, belt sander, chop saw, and
+            drill press are powered off between the hours of 10pm and 6am, daily. Tampering with timers is
+            considered a serious safety violation.
+        </p>
+        <p>
+            Violation of any wood shop policy will result in loss of access to BTU Lab and the wood shop
+            until both orientations are repeated.
+        </p>
+        <ul>
+            <li>Use of the wood shop requires an orientation from BTU Lab staff.</li>
+            <li>Following the orientation, you may use the wood shop under the following conditions:
+                <ul>
+                    <li>Observe all safety rules without exception.</li>
+                    <li>Do not work alone when no one could hear you if you needed assistance. Stay in earshot.</li>
+                    <li>Do not operate any tool that you are unfamiliar with. Get assistance.</li>
+                    <li>Do not alter any machine in a permanent way.</li>
+                    <li>Do not remove any tools from the wood shop or BTU Lab without staff approval.</li>
+                    <li>Do not attempt to repair a malfunctioning tool.</li>
+                    <li>Report malfunctioning tools. It is okay when a tool breaks under normal circumstances.
+                        A malfunctioning machine can be dangerous if a problem isn't understood. We just want
+                        to know what happened to prevent any possible harm.</li>
+                </ul>
+            </li>
+            <li>BTU Staff reserve the right to revoke wood shop access for any reason deemed necessary.</li>
+            <li>Deadlines, fatigue, and other lack of preparation do not justify ignoring any wood shop policy.</li>
+            <li>Multiple violations of wood shop policy, by one or more individuals, will result in reduced
+                access for everyone including locking out machines or the entire space when staff are not
+                available.</li>
+        </ul>
+        <p>
+            <strong>Materials:</strong> BTU LAB IS NOT A FREE SUPPLY STORE. But there are many ways to barter,
+            including displaying your work in BTU, tagging us in social media, offering workshops,
+            volunteering to organize supplies, and more. If you need something, we ask that you give
+            something in return.
+        </p>
+    </main>
+
+<script src="../../BannerCubes/cube-hero.js" defer></script>
 </body>
 </html>
