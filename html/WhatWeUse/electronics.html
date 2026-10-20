@@ -10,7 +10,8 @@
 </head>
 <body>
 <nav class="nav" aria-label="Main">
-  <ul>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-menu"><span class="nav-toggle-icon" aria-hidden="true"></span>Navigate</button>
+  <ul id="main-menu">
     <li><a href="../home.html">Home</a></li>
     <li class="dropdown">
       <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="tools-menu">Explore the Lab <span class="caret" aria-hidden="true">&#9662;</span></button>
@@ -38,7 +39,10 @@
   </ul>
 </nav>
 
-<img class="shop" src="../../images/electronics-animation.gif" alt="Line drawing of the BTU electronics benches: parts drawers on lit shelves, a pegboard of wire and tape, soldering stations, an oscilloscope showing a wave, a power supply, a soldering iron working on a circuit board in helping hands, and a robot arm on a cart" width="1800" height="435">
+<picture class="shop-banner">
+  <source media="(max-width: 700px)" srcset="../../images/electronics-animation-mobile.gif" width="843" height="435">
+  <img class="shop" src="../../images/electronics-animation.gif" alt="Line drawing of the BTU electronics benches: parts drawers on lit shelves, a pegboard of wire and tape, soldering stations, an oscilloscope showing a wave, a power supply, a soldering iron working on a circuit board in helping hands, and a robot arm on a cart" width="1800" height="435">
+</picture>
     <main class="page-content tool-page">
         <p class="color-intro c-electronics">
             Electronics equipment is labeled... teal? Cyan? Turquoise? Aqua? Oh, lort...<span class="color-word c-electronics">THIS COLOR!</span>

@@ -10,7 +10,8 @@
 </head>
 <body>
 <nav class="nav" aria-label="Main">
-  <ul>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-menu"><span class="nav-toggle-icon" aria-hidden="true"></span>Navigate</button>
+  <ul id="main-menu">
     <li><a href="../home.html">Home</a></li>
     <li class="dropdown">
       <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="tools-menu">Explore the Lab <span class="caret" aria-hidden="true">&#9662;</span></button>
@@ -38,7 +39,10 @@
   </ul>
 </nav>
 
-<img class="shop" src="../../images/lasers-animation.gif" alt="Line drawing of the BTU laser area: a rack of plywood and acrylic sheets, two laser cutters with red beams cutting and engraving, the sign-up whiteboard, a fire extinguisher, a computer showing a design, and finished laser-cut projects including engraved playing cards" width="1800" height="435">
+<picture class="shop-banner">
+  <source media="(max-width: 700px)" srcset="../../images/lasers-animation-mobile.gif" width="843" height="435">
+  <img class="shop" src="../../images/lasers-animation.gif" alt="Line drawing of the BTU laser area: a rack of plywood and acrylic sheets, two laser cutters with red beams cutting and engraving, the sign-up whiteboard, a fire extinguisher, a computer showing a design, and finished laser-cut projects including engraved playing cards" width="1800" height="435">
+</picture>
     <main class="page-content tool-page">
         <p class="color-intro c-lasers">
             Laser equipment and materials are labeled <span class="color-word c-lasers">RED</span>!!!

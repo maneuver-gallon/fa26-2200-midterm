@@ -10,7 +10,8 @@
 </head>
 <body>
 <nav class="nav" aria-label="Main">
-  <ul>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-menu"><span class="nav-toggle-icon" aria-hidden="true"></span>Navigate</button>
+  <ul id="main-menu">
     <li><a href="../home.html">Home</a></li>
     <li class="dropdown">
       <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="tools-menu">Explore the Lab <span class="caret" aria-hidden="true">&#9662;</span></button>
@@ -38,7 +39,10 @@
   </ul>
 </nav>
 
-<img class="shop" src="../../images/cnc-animation.gif" alt="Line drawing of the BTU CNC area: a Shaper Origin handheld CNC router cutting the letters B, T and U in blue into a board on a workbench, with a plywood rack, pegboard of tools, shop vac, a monitor playing the tutorial video, and finished projects" width="1800" height="435">
+<picture class="shop-banner">
+  <source media="(max-width: 700px)" srcset="../../images/cnc-animation-mobile.gif" width="843" height="435">
+  <img class="shop" src="../../images/cnc-animation.gif" alt="Line drawing of the BTU CNC area: a Shaper Origin handheld CNC router cutting the letters B, T and U in blue into a board on a workbench, with a plywood rack, pegboard of tools, shop vac, a monitor playing the tutorial video, and finished projects" width="1800" height="435">
+</picture>
     <main class="page-content tool-page">
         <h2>WE GOT ONE!</h2>
         <p class="color-intro c-cnc">

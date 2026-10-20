@@ -10,7 +10,8 @@
 </head>
 <body>
 <nav class="nav" aria-label="Main">
-  <ul>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-menu"><span class="nav-toggle-icon" aria-hidden="true"></span>Navigate</button>
+  <ul id="main-menu">
     <li><a href="../home.html">Home</a></li>
     <li class="dropdown">
       <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="tools-menu">Explore the Lab <span class="caret" aria-hidden="true">&#9662;</span></button>
@@ -38,7 +39,10 @@
   </ul>
 </nav>
 
-<img class="shop" src="../../images/wood-shop-animation.gif" alt="Line drawing of the BTU wood shop: a lumber rack, table saw, band saw, drill press, workbench with a chop saw, belt sander and dust collector, all running and throwing pink sparks" width="1800" height="435">
+<picture class="shop-banner">
+  <source media="(max-width: 700px)" srcset="../../images/wood-shop-animation-mobile.gif" width="843" height="435">
+  <img class="shop" src="../../images/wood-shop-animation.gif" alt="Line drawing of the BTU wood shop: a lumber rack, table saw, band saw, drill press, workbench with a chop saw, belt sander and dust collector, all running and throwing pink sparks" width="1800" height="435">
+</picture>
     <main class="page-content tool-page">
         <p class="color-intro c-wood">
             The WOOD SHOP entrance is marked <span class="color-word c-wood">PINK</span>. Inside, tools have their own color-coding system.

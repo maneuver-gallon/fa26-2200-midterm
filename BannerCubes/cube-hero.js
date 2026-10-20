@@ -53,3 +53,26 @@ document.querySelectorAll('.nav .dropdown').forEach((dropdown) => {
     if (!dropdown.contains(e.relatedTarget)) setOpen(false);
   });
 });
+
+document.querySelectorAll('.nav').forEach((nav) => {
+  const button = nav.querySelector('.nav-toggle');
+  if (!button) return;
+
+  function setMenu(open) {
+    nav.classList.toggle('nav-open', open);
+    button.setAttribute('aria-expanded', open);
+  }
+
+  button.addEventListener('click', () => setMenu(!nav.classList.contains('nav-open')));
+
+  document.addEventListener('click', (e) => {
+    if (!nav.contains(e.target)) setMenu(false);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+      setMenu(false);
+      button.focus();
+    }
+  });
+});

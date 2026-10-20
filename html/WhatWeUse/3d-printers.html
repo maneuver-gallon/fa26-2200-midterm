@@ -10,7 +10,8 @@
 </head>
 <body>
 <nav class="nav" aria-label="Main">
-  <ul>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-menu"><span class="nav-toggle-icon" aria-hidden="true"></span>Navigate</button>
+  <ul id="main-menu">
     <li><a href="../home.html">Home</a></li>
     <li class="dropdown">
       <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="tools-menu">Explore the Lab <span class="caret" aria-hidden="true">&#9662;</span></button>
@@ -38,7 +39,10 @@
   </ul>
 </nav>
 
-<img class="shop" src="../../images/3d-printers-animation.gif" alt="Line drawing of the BTU 3D printing area: a rack of filament spools, three Prusa MK4 printers in lit enclosures printing the purple letters B, T and U layer by layer, four Prusa MINI printers, a computer running the slicer, and shelves of finished prints" width="1800" height="435">
+<picture class="shop-banner">
+  <source media="(max-width: 700px)" srcset="../../images/3d-printers-animation-mobile.gif" width="843" height="435">
+  <img class="shop" src="../../images/3d-printers-animation.gif" alt="Line drawing of the BTU 3D printing area: a rack of filament spools, three Prusa MK4 printers in lit enclosures printing the purple letters B, T and U layer by layer, four Prusa MINI printers, a computer running the slicer, and shelves of finished prints" width="1800" height="435">
+</picture>
     <main class="page-content tool-page">
         <p class="color-intro c-printers">
             3D Printing equipment and materials are labeled <span class="color-word c-printers">PURPLE</span>.

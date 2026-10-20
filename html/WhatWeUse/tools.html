@@ -10,7 +10,8 @@
 </head>
 <body>
 <nav class="nav" aria-label="Main">
-  <ul>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-menu"><span class="nav-toggle-icon" aria-hidden="true"></span>Navigate</button>
+  <ul id="main-menu">
     <li><a href="../home.html">Home</a></li>
     <li class="dropdown">
       <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="tools-menu">Explore the Lab <span class="caret" aria-hidden="true">&#9662;</span></button>
@@ -38,7 +39,10 @@
   </ul>
 </nav>
 
-<img class="shop" src="../../images/tools-animation.gif" alt="Line drawing of the BTU general tools area: a pegboard of hand tools with snipping scissors, a workbench where a tape measure extends, a knife cuts along a ruler, a hot glue gun drips and a drill drives a screw into plywood, a sanding station, and a rack of paper, craft supplies, fabric, laser-safe plywood and plastics, all labeled green" width="1800" height="435">
+<picture class="shop-banner">
+  <source media="(max-width: 700px)" srcset="../../images/tools-animation-mobile.gif" width="843" height="435">
+  <img class="shop" src="../../images/tools-animation.gif" alt="Line drawing of the BTU general tools area: a pegboard of hand tools with snipping scissors, a workbench where a tape measure extends, a knife cuts along a ruler, a hot glue gun drips and a drill drives a screw into plywood, a sanding station, and a rack of paper, craft supplies, fabric, laser-safe plywood and plastics, all labeled green" width="1800" height="435">
+</picture>
     <main class="page-content tool-page">
         <p class="color-intro c-tools">
             General tools and materials are labeled <span class="color-word c-tools">GREEN</span>. Power tools (mostly used in the

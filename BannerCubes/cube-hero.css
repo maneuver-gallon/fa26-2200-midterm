@@ -188,6 +188,24 @@ body {
   .content a:hover { transform: translateY(-2px); }
 }
 
+.hero-gif { display: none; }
+
+@media (max-width: 700px) {
+  .hero {
+    height: calc(180px + var(--extra));
+    min-height: 0;
+  }
+  .hero .grid { display: none; }
+  .hero-gif {
+    display: block;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
 .hint-touch { display: none; }
 @media (hover: none) {
   .hint-pointer { display: none; }
@@ -274,6 +292,78 @@ body {
   }
   .nav a,
   .nav .dropdown-toggle { padding: .8rem .6rem; }
+}
+
+.nav-toggle { display: none; }
+
+@media (max-width: 700px) {
+  .nav { display: flex; justify-content: center; }
+  .nav-toggle {
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+    padding: 1rem .9rem;
+    border: 0;
+    background: none;
+    color: #fff;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: .5px;
+    cursor: pointer;
+  }
+  .nav-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+  .nav-toggle-icon,
+  .nav-toggle-icon::before,
+  .nav-toggle-icon::after {
+    display: block;
+    width: 18px;
+    height: 2px;
+    border-radius: 1px;
+    background: currentColor;
+  }
+  .nav-toggle-icon { position: relative; }
+  .nav-toggle-icon::before,
+  .nav-toggle-icon::after { content: ""; position: absolute; left: 0; }
+  .nav-toggle-icon::before { top: -6px; }
+  .nav-toggle-icon::after { top: 6px; }
+
+  .nav > ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    z-index: 20;
+    width: min(18rem, calc(100vw - 32px));
+    max-height: calc(100vh - 70px);
+    max-height: calc(100svh - 70px);
+    overflow-y: auto;
+    padding: .25rem 0;
+    background: #fff;
+    box-shadow: 0 2px 6px rgb(0 0 0 / .2);
+    transform: translateX(-50%);
+  }
+  .nav-open > ul { display: block; }
+  .nav a,
+  .nav .dropdown-toggle {
+    width: 100%;
+    padding: .7rem 1rem;
+    border-bottom: 0;
+    border-left: 3px solid transparent;
+    color: var(--ink);
+    text-align: left;
+  }
+  .nav a:hover,
+  .nav .dropdown-toggle:hover { border-bottom-color: transparent; background: #f2f2f2; }
+  .nav a[aria-current="page"] { border-left-color: var(--ink); font-weight: 400; }
+  .nav .dropdown-menu {
+    position: static;
+    min-width: 0;
+    padding: 0 0 .25rem;
+    box-shadow: none;
+  }
+  .nav .dropdown-menu a { padding: .55rem 1rem .55rem 2rem; color: var(--muted); }
+  .nav .dropdown.open .caret { display: inline-block; transform: rotate(180deg); }
 }
 
 @media (prefers-reduced-motion: reduce) {

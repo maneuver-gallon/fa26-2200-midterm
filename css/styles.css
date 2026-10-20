@@ -213,6 +213,13 @@
   height: auto;
   margin: 1rem 0 0;
 }
+.shop-banner { display: block; }
+@media (max-width: 700px) {
+  .shop {
+    height: 222px;
+    object-fit: cover;
+  }
+}
 .tool-page p, .tool-page li { font-size: 1.02rem; line-height: 1.75; }
 .tool-page h1 { margin-top: 0; margin-bottom: 8px; font-size: clamp(2.1rem, 4.4vw, 3rem); line-height: 1.15; }
 .tool-page h3 { margin-top: 36px; margin-bottom: 12px; font-size: 1.25rem; }
