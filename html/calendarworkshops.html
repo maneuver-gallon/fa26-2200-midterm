@@ -3,19 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calendar | BTU Lab</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../BannerCubes/cube-hero.css">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <ul class="nav-links">
-                <li><a href="whatweuse.html">What We Use</a></li>
-                <li><a href="rules.html">Lab Rules & Policies</a></li>
-                <li><a href="calendarworkshops.html">Calendar & Workshops</a></li>
-            </ul>
-            
+<nav class="nav" aria-label="Main">
+  <ul>
+    <li><a href="home.html">Home</a></li>
+    <li class="dropdown">
+      <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="tools-menu">Explore the Lab <span class="caret" aria-hidden="true">&#9662;</span></button>
+      <ul class="dropdown-menu" id="tools-menu">
+        <li><a href="WhatWeUse/tools.html">Tools</a></li>
+        <li><a href="WhatWeUse/wood-shop.html">Wood Shop</a></li>
+        <li><a href="WhatWeUse/sewing-textiles.html">Sewing &amp; Textiles</a></li>
+        <li><a href="WhatWeUse/electronics.html">Electronics</a></li>
+        <li><a href="WhatWeUse/lasers.html">Lasers</a></li>
+        <li><a href="WhatWeUse/3d-printers.html">3D Printers</a></li>
+        <li><a href="WhatWeUse/cnc.html">CNC</a></li>
+      </ul>
+    </li>
+    <li><a href="mischief-makers.html">BTU Mischief Makers</a></li>
+    <li><a href="calendarworkshops.html" aria-current="page">Calendar</a></li>
+    <li class="dropdown">
+      <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="more-menu">More <span class="caret" aria-hidden="true">&#9662;</span></button>
+      <ul class="dropdown-menu" id="more-menu">
+        <li><a href="More/lab-rules-and-policies.html">Lab Rules and Policies</a></li>
+        <li><a href="More/workshops.html">Workshops</a></li>
+        <li><a href="More/help-us-blow-things-up.html">Help Us Blow Things Up</a></li>
+        <li><a href="More/faculty.html">Faculty</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
-        </nav>
-    </header>
+<main class="page-content">
+  <div class="calendar-card">
+    <iframe title="BTU Lab calendar" src="https://calendar.google.com/calendar/embed?color=%2392e1c0&amp;color=%23cd74e6&amp;color=%23f83a22&amp;color=%23fad165&amp;mode=month&amp;showTitle=0&amp;showPrint=0&amp;showTz=0&amp;src=01c19e46b7d1df63b8c2bf86c13e9e8d4dd48407953069b76258fa20a9f6e946@group.calendar.google.com&amp;src=1d4bdcc88938abd2d291838c548916abba1d14f79ad53e49a62b76c16d0ce4fc@group.calendar.google.com&amp;src=917af08c35085b7a6203c14ddcfb9a84b26f31030114e022d423518e82d442e3@group.calendar.google.com&amp;src=atlasbtulab@gmail.com" loading="lazy"></iframe>
+  </div>
+</main>
+
+<script src="../BannerCubes/cube-hero.js" defer></script>
 </body>
 </html>
