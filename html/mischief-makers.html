@@ -1,42 +1,761 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../BannerCubes/cube-hero.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mischief Makers</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BTU Mischief Makers | BTU Lab</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../BannerCubes/cube-hero.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+  .mm-page { max-width: 1120px; margin: 0 auto; padding: 40px 24px 80px; font-family: Lato, Arial, sans-serif; color: #252525; }
+  .mm-page * { box-sizing: border-box; }
+  .mm-heading { display: flex; align-items: center; gap: 22px; padding-bottom: 25px; border-bottom: 1px solid #dedede; }
+  .mm-logo { width: 95px; height: 95px; object-fit: contain; flex-shrink: 0; }
+  .mm-heading h1 { font-size: clamp(2rem, 4.5vw, 3.25rem); line-height: 1.12; margin: 0; }
+  .mm-intro { max-width: 780px; margin: 30px 0 50px; }
+  .mm-intro h2 { margin: 0 0 14px; font-size: 1.8rem; }
+  .mm-intro p { font-size: 1.04rem; line-height: 1.75; margin: 0 0 16px; }
+  .mm-intro a, .mm-card a { color: inherit; text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; }
+  .mm-section { margin-top: 45px; }
+  .mm-section h2 { font-size: 1.8rem; margin: 0 0 24px; padding-bottom: 12px; border-bottom: 1px solid #dedede; }
+  .mm-grid { display: grid; grid-template-columns: 1fr; gap: 18px; }
+  .mm-card { display: grid; grid-template-columns: 200px minmax(0,1fr); border: 1px solid #dedede; border-radius: 8px; background: #fff; overflow: hidden; min-width: 0; }
+  .mm-photo { display: block; width: auto; height: auto; max-width: 100%; max-height: 220px; object-fit: contain; object-position: left top; background: transparent; align-self: start; }
+  .mm-person { padding: 19px 18px; min-width: 0; }
+  .mm-person h3 { font-size: 1.18rem; line-height: 1.3; margin: 0 0 8px; }
+  .mm-role { margin: 0 0 8px; color: #555; font-size: .91rem; line-height: 1.5; }
+  .mm-email { margin: 0 0 14px; font-size: .9rem; }
+  .mm-skill-title { font-size: .92rem; font-weight: bold; margin: 0 0 8px; }
+  .mm-skills { padding-left: 18px; margin: 0; font-size: .93rem; line-height: 1.55; }
+  .mm-skills li { margin-bottom: 3px; }
+  .mm-note { font-size: .92rem; margin: 0 0 12px; }
+  @media (max-width: 850px) { .mm-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 520px) {
+    .mm-page { padding: 28px 16px 55px; }
+    .mm-heading { gap: 13px; }
+    .mm-logo { width: 65px; height: 65px; }
+    .mm-card { grid-template-columns: 112px minmax(0, 1fr); }
+    .mm-photo { max-height: 180px; }
+    .mm-person { padding: 14px; }
+    .mm-person h3 { font-size: 1.04rem; }
+    .mm-skills { font-size: .88rem; }
+  }
+  @media (max-width: 360px) { .mm-card { grid-template-columns: 1fr; } .mm-photo { max-width: 220px; max-height: 220px; } }
+  </style>
 </head>
-<header>
+<body>
 <nav class="nav" aria-label="Main">
   <ul>
     <li><a href="home.html">Home</a></li>
     <li class="dropdown">
-      <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="tools-menu">Tools <span class="caret" aria-hidden="true">&#9662;</span></button>
+      <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="tools-menu">Explore the Lab <span class="caret" aria-hidden="true">&#9662;</span></button>
       <ul class="dropdown-menu" id="tools-menu">
-        <li><a href="wood-shop.html">Wood Shop</a></li>
-        <li><a href="sewing-textiles.html">Sewing &amp; Textiles</a></li>
-        <li><a href="electronics.html">Electronics</a></li>
-        <li><a href="lasers.html" aria-current="page">Lasers</a></li>
-        <li><a href="3d-printers.html">3D Printers</a></li>
-        <li><a href="cnc.html">CNC</a></li>
+        <li><a href="WhatWeUse/tools.html">Tools</a></li>
+        <li><a href="WhatWeUse/wood-shop.html">Wood Shop</a></li>
+        <li><a href="WhatWeUse/sewing-textiles.html">Sewing &amp; Textiles</a></li>
+        <li><a href="WhatWeUse/electronics.html">Electronics</a></li>
+        <li><a href="WhatWeUse/lasers.html">Lasers</a></li>
+        <li><a href="WhatWeUse/3d-printers.html">3D Printers</a></li>
+        <li><a href="WhatWeUse/cnc.html">CNC</a></li>
       </ul>
     </li>
-    <li><a href="#mischief-makers">BTU Mischief Makers</a></li>
-    <li><a href="#btu-lab">BTU Lab</a></li>
-    <li><a href="#calendar">Calendar</a></li>
+    <li><a href="#mischief-makers" aria-current="page">BTU Mischief Makers</a></li>
+    <li><a href="home.html#btu-lab">BTU Lab</a></li>
+    <li><a href="calendarworkshops.html">Calendar</a></li>
+    <li class="dropdown">
+      <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="more-menu">More <span class="caret" aria-hidden="true">&#9662;</span></button>
+      <ul class="dropdown-menu" id="more-menu">
+        <li><a href="More/lab-rules-and-policies.html">Lab Rules and Policies</a></li>
+        <li><a href="More/workshops.html">Workshops</a></li>
+        <li><a href="More/help-us-blow-things-up.html">Help Us Blow Things Up</a></li>
+        <li><a href="More/faculty.html">Faculty</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
-    <h1>The BTU "Mischief Makers"</h1>
-</header>
-<body>
-    <section>
-        <h1>Make <em>your</em> Mischief!</h1>
-        <p>Use this directory to contact BTU staff about your interests or questions. Next to each person's image, is a list of things they can help you with, and their contact information. Reach out! We love to help.</p>
-    </section>
-    <section>
-        <p>Become part of the team! Email Zack Weaver if you're interested in sharing your skills with the community.</p>
-    </section>
+<main class="mm-page" id="mischief-makers">
+  <div class="mm-heading">
+    <img class="mm-logo" src="../images/btu-mischief-makers-1.jpg" alt="BTU Lab logo">
+    <h1>The BTU &quot;Mischief Makers&quot;</h1>
+  </div>
+  <section class="mm-intro" aria-labelledby="mm-intro-title">
+    <h2 id="mm-intro-title">Make <em>your</em> Mischief!</h2>
+    <p>Use this directory to contact BTU staff about your interests or questions. Next to each person's image, is a list of things they can help you with, and their contact information. Reach out! We love to help.</p>
+    <p>Become part of the team! Email Zack Weaver if you're interested in sharing your skills with the community.</p>
+  </section>
+  <section class="mm-section" aria-labelledby="mm-director-title">
+    <h2 id="mm-director-title">Director</h2>
+    <div class="mm-grid">      <article class="mm-card">
+        <img class="mm-photo" src="../images/btu-mischief-makers-2.jpg" alt="Photo for Zack Weaver" loading="lazy">
+        <div class="mm-person">
+          <h3>Zack Weaver</h3>
+          <p class="mm-role">Director, BTU Lab | Assistant Teaching Professor, ATLAS Institute.</p>
+          <p class="mm-email"><a href="mailto:zack.weaver@colorado.edu">zack.weaver@colorado.edu</a></p>
+          <p class="mm-skill-title">I am a wizard with:</p>
+          <ul class="mm-skills">
+            <li>General Tools</li>
+            <li>Wood Shop</li>
+            <li>Sewing &amp; Textiles</li>
+            <li>Electronics</li>
+            <li>Lasers (Lazor Wizard)</li>
+            <li>3D Printing</li>
+            <li>Shaper CNC</li>
+            <li>Way, way more</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+  <section class="mm-section" aria-labelledby="mm-current-title">
+    <h2 id="mm-current-title">🍁Fall 2026 Staff🍁</h2>
+    <div class="mm-grid">
+      <article class="mm-card">
+        <img class="mm-photo" src="../images/btu-mischief-makers-3.jpg" alt="Photo for Bella Consentino" loading="lazy">
+        <div class="mm-person">
+          <h3>Bella Consentino</h3>
+          <p class="mm-role">Undergraduate Student, ATLAS Institute</p>
+          <p class="mm-email"><a href="mailto:Bella.Consentino@colorado.edu">Bella.Consentino@colorado.edu</a></p>
+          <p class="mm-skill-title">My skills include:</p>
+          <ul class="mm-skills">
+            <li>Woodshop</li>
+            <li>Electronics</li>
+            <li>Lasers (Lazor Wizard)</li>
+            <li>Soldering</li>
+            <li>General Tools</li>
+            <li>Sewing</li>
+            <li>3D printing</li>
+            <li>3D modeling (SketchUp &amp; Blender specifically)</li>
+            <li>Most of Adobe Suite</li>
+            <li>Programming (C++, Python, JavaScript, Godot, +more)</li>
+            <li>Being fitted up</li>
+          </ul>
+        </div>
+      </article>
+      <article class="mm-card">
+        <img class="mm-photo" src="../images/btu-mischief-makers-4.jpg" alt="Photo for Keturah Dunn" loading="lazy">
+        <div class="mm-person">
+          <h3>Keturah Dunn</h3>
+          <p class="mm-role">Undergraduate Student, ATLAS Institute | President, CU3D | Head 3D Printing Wizard</p>
+          <p class="mm-email"><a href="mailto:kedu1409@colorado.edu">kedu1409@colorado.edu</a></p>
+          <p class="mm-skill-title">My skills include:</p>
+          <ul class="mm-skills">
+            <li>3D printing (including multicolor printing!)</li>
+            <li>3D modeling</li>
+            <li>Basic Sewing</li>
+          </ul>
+        </div>
+      </article>
+      <article class="mm-card">
+        <img class="mm-photo" src="../images/btu-mischief-makers-5.jpg" alt="Photo for Vani Chhay" loading="lazy">
+        <div class="mm-person">
+          <h3>Vani Chhay</h3>
+          <p class="mm-role">Undergraduate Student, ATLAS Institute</p>
+          <p class="mm-email"><a href="mailto:Vanica.Chhay@colorado.edu">Vanica.Chhay@colorado.edu</a></p>
+          <p class="mm-skill-title">My skills include:</p>
+          <ul class="mm-skills">
+            <li>General tools</li>
+            <li>Lasers (Lazor Wizard)</li>
+            <li>Electronics/Circuits</li>
+            <li>Prototyping/ Design</li>
+            <li>3D printing</li>
+            <li>Soldering</li>
+            <li>Programming ( Arduino (C++) , Processing (JS, Python)</li>
+            <li>Sewing</li>
+            <li>Overwatch</li>
+          </ul>
+        </div>
+      </article>
+      <article class="mm-card">
+        <img class="mm-photo" src="../images/btu-mischief-makers-6.jpg" alt="Photo for Terri Hughes" loading="lazy">
+        <div class="mm-person">
+          <h3>Terri Hughes</h3>
+          <p class="mm-role">Undergraduate Student, CMCI (O.G. Kai&#x27;s sister!)</p>
+          <p class="mm-email"><a href="mailto:Terri.Hughes@colorado.edu">Terri.Hughes@colorado.edu</a></p>
+          <p class="mm-skill-title">My skills include:</p>
+          <ul class="mm-skills">
+            <li>General Tools</li>
+            <li>Sewing (Hand stitch + Machine)</li>
+            <li>Dyeing Fabrics</li>
+            <li>3D Modeling (Autodesk Inventor)</li>
+            <li>3D Printing</li>
+            <li>Woodshop Tools</li>
+            <li>Chain Making (Chain Jewelry/Spikes/Studs)</li>
+            <li>Soldering</li>
+            <li>Telling you only the things you want to hear</li>
+          </ul>
+        </div>
+      </article>
+      <article class="mm-card">
+        <img class="mm-photo" src="../images/btu-mischief-makers-7.jpg" alt="Photo for Leo Heuring" loading="lazy">
+        <div class="mm-person">
+          <h3>Leo Heuring</h3>
+          <p class="mm-role">Undergraduate Student, ATLAS Institute</p>
+          <p class="mm-email"><a href="mailto:Leo.Heuring@colorado.edu">Leo.Heuring@colorado.edu</a></p>
+          <p class="mm-skill-title">My skills include:</p>
+          <ul class="mm-skills">
+            <li>3D Printing (Ask if you want to try something fun on one of the CU3D printers!)</li>
+            <li>3D Modeling</li>
+            <li>CAD (Solidworks)</li>
+            <li>Electronics</li>
+            <li>Soldering</li>
+            <li>Basic PCB design and assembly</li>
+            <li>Programming (Python, Arduino)</li>
+            <li>Fabrication</li>
+          </ul>
+        </div>
+      </article>
+      <article class="mm-card">
+        <img class="mm-photo" src="../images/btu-mischief-makers-8.jpg" alt="Photo for Sage Morgan-LaRosa" loading="lazy">
+        <div class="mm-person">
+          <h3>Sage Morgan-LaRosa</h3>
+          <p class="mm-role">Undergraduate Student, ATLAS Institute</p>
+          <p class="mm-email"><a href="mailto:sage.morgan-larosa@colorado.edu">sage.morgan-larosa@colorado.edu</a></p>
+          <p class="mm-skill-title">Sik Skillz</p>
+          <ul class="mm-skills">
+            <li>3d modeling (Mostly blender, Sketch up)</li>
+            <li>3d printing</li>
+            <li>Coding (C++, Java, Python, typescript, Css)</li>
+            <li>General electronics</li>
+            <li>General tools</li>
+            <li>The vast void of nerdem</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+  <section class="mm-section" aria-labelledby="mm-former-title">
+    <h2 id="mm-former-title">Volunteer &amp; Emeritus Mischief Makers</h2>
+    <div class="mm-grid">
+      <article class="mm-card">
+        <img class="mm-photo" src="../images/btu-mischief-makers-9.jpg" alt="Photo for Danny Rankin" loading="lazy">
+        <div class="mm-person">
+          <h3>Danny Rankin</h3>
+          <p class="mm-role">Director, Whaaat!? Lab | Assistant Teaching Professor, ATLAS Institute.</p>
+          <p class="mm-email"><a href="mailto:danny.rankin@colorado.edu">danny.rankin@colorado.edu</a></p>
+          <p class="mm-skill-title">My skills include:</p>
+          <ul class="mm-skills">
+            <li>Woodworking</li>
+            <li>General shop skills</li>
+            <li>Laser-cutting (Lazor Wizard)</li>
+            <li>Installation design</li>
+            <li>Custom game controllers</li>
+          </ul>
+        </div>
+      </article>
+      <article class="mm-card">
+        <img class="mm-photo" src="../images/btu-mischief-makers-10.jpg" alt="Photo for Autumn Davis" loading="lazy">
+        <div class="mm-person">
+          <h3>Autumn Davis</h3>
+          <p class="mm-role">Undergraduate Student, ATLAS Institute</p>
+          <p class="mm-email"><a href="mailto:autumn.davis@colorado.edu">autumn.davis@colorado.edu</a></p>
+          <p class="mm-skill-title">My SuperSkillz™ include:</p>
+          <ul class="mm-skills">
+            <li>General Tools</li>
+            <li>Sewing (Machine/Hand)</li>
+            <li>Graphic Design &amp; various design software</li>
+            <li>Adobe Suite</li>
+            <li>Semiotics stuff (yay!)</li>
+            <li>Soldering</li>
+            <li>Laser cutting</li>
+            <li>Basic 3d printing/modeling help</li>
+          </ul>
+        </div>
+      </article>
+      <article class="mm-card">
+        <img class="mm-photo" src="../images/btu-mischief-makers-11.jpg" alt="Photo for Lucky Bonniwell" loading="lazy">
+        <div class="mm-person">
+          <h3>Lucky Bonniwell</h3>
+          <p class="mm-role">Undergraduate Student, ATLAS Institute</p>
+          <p class="mm-email"><a href="mailto:thatcher.bonniwell@colorado.edu">thatcher.bonniwell@colorado.edu</a></p>
+          <p class="mm-skill-title">I can help you with:</p>
+          <ul class="mm-skills">
+            <li>laser cutting</li>
+            <li>woodworking</li>
+            <li>general shop skills</li>
+            <li>programming</li>
+            <li>3D modeling</li>
+            <li>soldering</li>
+          </ul>
+        </div>
+      </article>
+      <article class="mm-card">
+        <img class="mm-photo" src="../images/btu-mischief-makers-12.jpg" alt="Photo for Yunessa Rodriguez" loading="lazy">
+        <div class="mm-person">
+          <h3>Yunessa Rodriguez</h3>
+          <p class="mm-role">Undergraduate Students, ATLAS Institute</p>
+          <p class="mm-email"><a href="mailto:Yunessa.Rodriguez@colorado.edu">Yunessa.Rodriguez@colorado.edu</a></p>
+          <p class="mm-skill-title">I can teach:</p>
+          <ul class="mm-skills">
+            <li>Rhino</li>
+            <li>3D Printing</li>
+            <li>Maybe sum laser cutter stuff</li>
+            <li>Prototyping</li>
+            <li>And more fun stuffs</li>
+          </ul>
+        </div>
+      </article>
+      <article class="mm-card">
+        <img class="mm-photo" src="../images/btu-mischief-makers-13.jpg" alt="Photo for Jacob Le Mons" loading="lazy">
+        <div class="mm-person">
+          <h3>Jacob Le Mons</h3>
+          <p class="mm-role">Undergraduate Student, ATLAS Institute</p>
+          <p class="mm-email"><a href="mailto:jacob.lemons@colorado.edu">jacob.lemons@colorado.edu</a></p>
+          <p class="mm-skill-title">My skills include:</p>
+          <ul class="mm-skills">
+            <li>Design, Prototyping, Documentation</li>
+            <li>General Tools</li>
+            <li>Lasers</li>
+            <li>3D Modelling (Onshape, SketchUp) &amp; Printing</li>
+            <li>Electronics &amp; Soldering</li>
+            <li>Woodshop &amp; Basic Metalworking</li>
+            <li>Basic Sewing &amp; Weaving</li>
+            <li>Sketching &amp; Graphic Design</li>
+            <li>Programming (C++, Python, HTML, CSS, JS)</li>
+            <li>Parkour, Skateboarding, Conversational Japanese</li>
+          </ul>
+        </div>
+      </article>
+      <article class="mm-card">
+        <img class="mm-photo" src="../images/btu-mischief-makers-14.jpg" alt="Photo for Pete Burke" loading="lazy">
+        <div class="mm-person">
+          <h3>Pete Burke</h3>
+          <p class="mm-role">Undergraduate Student, ATLAS Institute</p>
+          <p class="mm-email"><a href="mailto:peter.burke-1@colorado.edu">peter.burke-1@colorado.edu</a></p>
+          <p class="mm-skill-title">My skills include:</p>
+          <ul class="mm-skills">
+            <li>3D Modeling (SketchUp, Blender)</li>
+            <li>3D Printing</li>
+            <li>Woodworking</li>
+            <li>General Tools</li>
+            <li>Power Tools</li>
+            <li>Adobe Suite</li>
+            <li>Electronics</li>
+            <li>Project Documentation</li>
+            <li>Programming (C++, JS)</li>
+            <li>Anything related to D&amp;D</li>
+          </ul>
+        </div>
+      </article>
+      <article class="mm-card">
+        <img class="mm-photo" src="../images/btu-mischief-makers-15.jpg" alt="Photo for Elly Jensen" loading="lazy">
+        <div class="mm-person">
+          <h3>Elly Jensen</h3>
+          <p class="mm-role">Undergraduate Student, ATLAS Institute</p>
+          <p class="mm-email"><a href="mailto:ellyse.jensen@colorado.edu">ellyse.jensen@colorado.edu</a></p>
+          <p class="mm-skill-title">My skills include:</p>
+          <ul class="mm-skills">
+            <li>Sewing</li>
+            <li>Adobe creative suite</li>
+            <li>Lasers (Lazor Wizard)</li>
+            <li>3D printing</li>
+            <li>General tools</li>
+          </ul>
+        </div>
+      </article>
+      <article class="mm-card">
+        <img class="mm-photo" src="../images/btu-mischief-makers-16.jpg" alt="Photo for Krithik Ranjan" loading="lazy">
+        <div class="mm-person">
+          <h3>Krithik Ranjan</h3>
+          <p class="mm-role">PhD Student, ATLAS Institute</p>
+          <p class="mm-email"><a href="mailto:Krithik.Ranjan@colorado.edu">Krithik.Ranjan@colorado.edu</a></p>
+          <p class="mm-skill-title">I can help you with:</p>
+          <ul class="mm-skills">
+            <li>Electronics</li>
+            <li>Soldering</li>
+            <li>Oscilloscope (or The Omniscient ElectrO Scope) and other electrical tools</li>
+            <li>PCB design and assembly</li>
+          </ul>
+        </div>
+      </article>
+      <article class="mm-card">
+        <img class="mm-photo" src="../images/btu-mischief-makers-17.jpg" alt="Photo for Paul Bailey" loading="lazy">
+        <div class="mm-person">
+          <h3>Paul Bailey</h3>
+          <p class="mm-role">Graduate Student, ATLAS Institute (pictured, left)</p>
+          <p class="mm-email"><a href="mailto:geba2669@colorado.edu">geba2669@colorado.edu</a></p>
+          <ul class="mm-skills">
+            <li>Laser cutting at dawn (Lazor Wizard)</li>
+            <li>Checking your 3D print at midnight</li>
+            <li>GIS (Geographic Information Systems)</li>
+            <li>Corel Draw</li>
+            <li>Kinetic Sculpture Racing</li>
+            <li>Human powered art vehicles</li>
+          </ul>
+        </div>
+      </article>
+      <article class="mm-card">
+        <img class="mm-photo" src="../images/btu-mischief-makers-18.jpg" alt="Photo for Sena Uctuk" loading="lazy">
+        <div class="mm-person">
+          <h3>Sena Uctuk</h3>
+          <p class="mm-role">Undergraduate Student, ATLAS Institute, Computer Science (Graduated!)</p>
+          <p class="mm-email"><a href="mailto:sena.uctuk@colorado.edu">sena.uctuk@colorado.edu</a></p>
+          <p class="mm-note"><a href="https://www.linkedin.com/in/suctuk/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+          <p class="mm-skill-title">Things I can help with:</p>
+          <ul class="mm-skills">
+            <li>Prototyping/ modeling</li>
+            <li>3D printing</li>
+            <li>Lasers (Lazor Wizard)</li>
+            <li>Acrylic, Metal, and Wood Fabrication</li>
+            <li>Soldering</li>
+            <li>Electronics</li>
+            <li>Basic sewing machine stuff</li>
+            <li>Code: C++, WebDev, JS, Python</li>
+          </ul>
+        </div>
+      </article>
+      <article class="mm-card">
+        <img class="mm-photo" src="../images/btu-mischief-makers-19.jpg" alt="Photo for Arjun Ramachandran" loading="lazy">
+        <div class="mm-person">
+          <h3>Arjun Ramachandran</h3>
+          <p class="mm-role">Graduate Student, ATLAS Institute</p>
+          <p class="mm-email"><a href="mailto:arjun.ramachandran@colorado.edu">arjun.ramachandran@colorado.edu</a></p>
+          <p class="mm-skill-title">Things I&#x27;m good at:</p>
+          <ul class="mm-skills">
+            <li>General Tools</li>
+            <li>Electronics/Circuits</li>
+            <li>Drawing/Sketching</li>
+            <li>Rapid Prototyping/Fabrication</li>
+            <li>Robotics</li>
+          </ul>
+        </div>
+      </article>
+      <article class="mm-card">
+        <img class="mm-photo" src="../images/btu-mischief-makers-20.jpg" alt="Photo for Bart Baker" loading="lazy">
+        <div class="mm-person">
+          <h3>Bart Baker</h3>
+          <p class="mm-role">Undergraduate Student, ATLAS Institute (Graduated!)</p>
+          <p class="mm-email"><a href="mailto:bartholomew.baker@colorado.edu">bartholomew.baker@colorado.edu</a></p>
+          <p class="mm-skill-title">I can make your life better in:</p>
+          <ul class="mm-skills">
+            <li>Woodworking</li>
+            <li>Fabrication</li>
+            <li>Lasercutting</li>
+            <li>Soldering</li>
+            <li>Speakers</li>
+            <li>Graphic Design</li>
+            <li>Illustrator/InDesign</li>
+            <li>All things music!</li>
+          </ul>
+        </div>
+      </article>
+      <article class="mm-card">
+        <img class="mm-photo" src="../images/btu-mischief-makers-21.jpg" alt="Photo for Xin Wen" loading="lazy">
+        <div class="mm-person">
+          <h3>Xin Wen</h3>
+          <p class="mm-role">PhD Student, ATLAS Institute</p>
+          <p class="mm-email"><a href="mailto:xin.wen@colorado.edu">xin.wen@colorado.edu</a></p>
+          <p class="mm-skill-title">I am happy to help you with:</p>
+          <ul class="mm-skills">
+            <li>Sewing &amp; Textiles</li>
+            <li>Electronics</li>
+            <li>Lasers (Lazor Wizard)</li>
+            <li>3D Printing (I&#x27;ve done it elsewhere but still need to do the BTU 3D printing training)</li>
+            <li>Programming</li>
+          </ul>
+        </div>
+      </article>
+      <article class="mm-card">
+        <img class="mm-photo" src="../images/btu-mischief-makers-22.jpg" alt="Photo for Ashley Stafford" loading="lazy">
+        <div class="mm-person">
+          <h3>Ashley Stafford</h3>
+          <p class="mm-role">Undergraduate Student, ATLAS Institute | SPRING &#x27;25 STAFF (Graduated!)</p>
+          <p class="mm-email"><a href="mailto:Ashley.Stafford@colorado.edu">Ashley.Stafford@colorado.edu</a></p>
+          <p class="mm-skill-title">Things I know:</p>
+          <ul class="mm-skills">
+            <li>General Tools</li>
+            <li>Lasers (Lazor Wizard)</li>
+            <li>Sewing</li>
+            <li>3D Printing</li>
+            <li>Basic Electronics</li>
+            <li>The Horrors</li>
+          </ul>
+        </div>
+      </article>
+      <article class="mm-card">
+        <img class="mm-photo" src="../images/btu-mischief-makers-23.jpg" alt="Photo for Kai Adamchak" loading="lazy">
+        <div class="mm-person">
+          <h3>Kai Adamchak</h3>
+          <p class="mm-role">Undergraduate Student, ATLAS Institute (Graduated!)</p>
+          <p class="mm-email"><a href="mailto:kai.adamchack@colorado.edu">kai.adamchack@colorado.edu</a></p>
+          <p class="mm-skill-title">Things I Can Help With:</p>
+          <ul class="mm-skills">
+            <li>3D modeling</li>
+            <li>Adobe</li>
+            <li>Procreate/Digital Art</li>
+            <li>Prototyping</li>
+            <li>Artsy Stuff</li>
+          </ul>
+        </div>
+      </article>
+      <article class="mm-card">
+        <img class="mm-photo" src="../images/btu-mischief-makers-24.jpg" alt="Photo for Sophie Berry" loading="lazy">
+        <div class="mm-person">
+          <h3>Sophie Berry</h3>
+          <p class="mm-role">Undergraduate Student, ATLAS Institute | SPRING &#x27;25 STAFF (Graduated!)</p>
+          <p class="mm-email"><a href="mailto:sophie.berry@colorado.edu">sophie.berry@colorado.edu</a></p>
+          <p class="mm-skill-title">Things I can help with:</p>
+          <ul class="mm-skills">
+            <li>Prototyping/ modeling</li>
+            <li>3D printing</li>
+            <li>Lasers (Lazor Wizard)</li>
+            <li>General tools</li>
+            <li>Soldering</li>
+            <li>Electronics</li>
+            <li>Basics sewing machine stuff</li>
+          </ul>
+        </div>
+      </article>
+      <article class="mm-card">
+        <img class="mm-photo" src="../images/btu-mischief-makers-25.jpg" alt="Photo for Kaya Walker" loading="lazy">
+        <div class="mm-person">
+          <h3>Kaya Walker</h3>
+          <p class="mm-role">Undgergraduate Student, ATLAS Institute (Graduated!)</p>
+          <p class="mm-email"><a href="mailto:kaya.walker@colorado.edu">kaya.walker@colorado.edu</a></p>
+          <p class="mm-skill-title">I like to help people with:</p>
+          <ul class="mm-skills">
+            <li>General Tools</li>
+            <li>Sewing and Textiles</li>
+            <li>LASERS!</li>
+            <li>Electronics</li>
+            <li>Ceramics</li>
+            <li>ATLAS Social Media (LMK if you make cool things!)</li>
+          </ul>
+        </div>
+      </article>
+      <article class="mm-card">
+        <img class="mm-photo" src="../images/btu-mischief-makers-26.jpg" alt="Photo for Nefeli Hadjiyiannis" loading="lazy">
+        <div class="mm-person">
+          <h3>Nefeli Hadjiyiannis</h3>
+          <p class="mm-role">Undergraduate Student, ATLAS Institute (Graduated!)</p>
+          <p class="mm-email"><a href="mailto:nefeli.hadjiyiannis@colorado.edu">nefeli.hadjiyiannis@colorado.edu</a></p>
+          <p class="mm-skill-title">Here to help you with:</p>
+          <ul class="mm-skills">
+            <li>Sewing/Textiles</li>
+            <li>3D modeling</li>
+            <li>Adobe &amp; Animation</li>
+            <li>Soldering</li>
+            <li>Simple Electronics</li>
+            <li>Programming</li>
+            <li>General Tools</li>
+            <li>Vibes</li>
+          </ul>
+        </div>
+      </article>
+      <article class="mm-card">
+        <img class="mm-photo" src="../images/btu-mischief-makers-27.jpg" alt="Photo for Andrew Widner" loading="lazy">
+        <div class="mm-person">
+          <h3>Andrew Widner</h3>
+          <p class="mm-role">Undergraduate Student, CU3D President, ATLAS Ambassador | Head 3D Printer Wizard (Graduated!)</p>
+          <p class="mm-email"><a href="mailto:anwi5661@colorado.edu">anwi5661@colorado.edu</a></p>
+          <p class="mm-note">Want to try something crazy on one of the CU3D printers? Have a material you’re not sure how to use? Want to learn how a 3D printer works? Reach out to me!</p>
+          <p class="mm-skill-title">I would be happy to help with:</p>
+          <ul class="mm-skills">
+            <li>Advanced 3D printing</li>
+            <li>CAD (Fusion / OnShape)</li>
+            <li>3D modeling / Digital sculpting</li>
+            <li>Model rendering / Animation</li>
+            <li>Everything Blender</li>
+          </ul>
+        </div>
+      </article>
+      <article class="mm-card">
+        <img class="mm-photo" src="../images/btu-mischief-makers-28.jpg" alt="Photo for Quinn Pearson" loading="lazy">
+        <div class="mm-person">
+          <h3>Quinn Pearson</h3>
+          <p class="mm-role">Undergraduate Student, ATLAS Institute | FALL &#x27;24 STAFF</p>
+          <p class="mm-email"><a href="mailto:Quinn.Pearson@colorado.edu">Quinn.Pearson@colorado.edu</a></p>
+          <p class="mm-skill-title">I can help you with:</p>
+          <ul class="mm-skills">
+            <li>Lasers!</li>
+            <li>Electronics</li>
+            <li>General tools</li>
+            <li>Woodshop</li>
+            <li>Soldering</li>
+            <li>Creative problem solving</li>
+          </ul>
+        </div>
+      </article>
+      <article class="mm-card">
+        <img class="mm-photo" src="../images/btu-mischief-makers-29.jpg" alt="Photo for Perry Owens" loading="lazy">
+        <div class="mm-person">
+          <h3>Perry Owens</h3>
+          <p class="mm-role">Graduate Student, ATLAS Institute | SPRING &#x27;24 STAFF</p>
+          <p class="mm-email"><a href="mailto:Perry.Owens@colorado.edu">Perry.Owens@colorado.edu</a></p>
+          <p class="mm-skill-title">I work magic with:</p>
+          <ul class="mm-skills">
+            <li>Woodshop</li>
+            <li>General Tools</li>
+            <li>Lasers</li>
+            <li>3D modeling</li>
+          </ul>
+        </div>
+      </article>
+      <article class="mm-card">
+        <img class="mm-photo" src="../images/btu-mischief-makers-30.jpg" alt="Photo for Zoe Turner" loading="lazy">
+        <div class="mm-person">
+          <h3>Zoe Turner</h3>
+          <p class="mm-role">Undergraduate, ENVD | SPRING &#x27;24 STAFF</p>
+          <p class="mm-email"><a href="mailto:zotu4246@colorado.edu">zotu4246@colorado.edu</a></p>
+          <p class="mm-skill-title">Skills I can help you with:</p>
+          <ul class="mm-skills">
+            <li>Textiles and sewing</li>
+            <li>Laser cutting</li>
+            <li>3D Printing and Modeling</li>
+            <li>Woodworking and hand tools</li>
+            <li>Welding</li>
+            <li>Photography</li>
+            <li>Hand drawing and rendering</li>
+          </ul>
+        </div>
+      </article>
+      <article class="mm-card">
+        <img class="mm-photo" src="../images/btu-mischief-makers-31.jpg" alt="Photo for Atlas Zaina" loading="lazy">
+        <div class="mm-person">
+          <h3>Atlas Zaina</h3>
+          <p class="mm-role">Undergraduate Student, ATLAS Institute | SPRING &#x27;24 STAFF</p>
+          <p class="mm-email"><a href="mailto:Atlas.Zaina@colorado.edu">Atlas.Zaina@colorado.edu</a></p>
+          <p class="mm-skill-title">I am a wizard with:</p>
+          <ul class="mm-skills">
+            <li>General Tools</li>
+            <li>Wood Shop</li>
+            <li>Sewing &amp; Textiles</li>
+            <li>Lasers</li>
+            <li>Funny little crafts and more!</li>
+          </ul>
+        </div>
+      </article>
+      <article class="mm-card">
+        <img class="mm-photo" src="../images/btu-mischief-makers-32.jpg" alt="Photo for Kai Hughes" loading="lazy">
+        <div class="mm-person">
+          <h3>Kai Hughes</h3>
+          <p class="mm-email"><a href="mailto:kai.hughes@colorado.edu">kai.hughes@colorado.edu</a></p>
+          <p class="mm-skill-title">I am so very good at:</p>
+          <ul class="mm-skills">
+            <li>3D printing and 3D modeling</li>
+            <li>Digital art and graphic design</li>
+            <li>Woodshop stuff</li>
+            <li>Coding languages</li>
+            <li>Mold making / casting</li>
+            <li>Creating problems</li>
+            <li>Solving problems</li>
+          </ul>
+        </div>
+      </article>
+      <article class="mm-card">
+        <img class="mm-photo" src="../images/btu-mischief-makers-33.jpg" alt="Photo for Jeremiah Klinkerman" loading="lazy">
+        <div class="mm-person">
+          <h3>Jeremiah Klinkerman</h3>
+          <p class="mm-role">Undergraduate, Dinosaur Studies | SPRING &#x27;24 STAFF (image approximate)</p>
+          <p class="mm-email"><a href="mailto:jeremiah.klinkerman@colorado.edu">jeremiah.klinkerman@colorado.edu</a></p>
+          <p class="mm-skill-title">Things I can help with:</p>
+          <ul class="mm-skills">
+            <li>General Tools</li>
+            <li>Wood Shop</li>
+            <li>Sewing &amp; Textiles</li>
+            <li>2D Drawing</li>
+            <li>3D Sculpture</li>
+            <li>Dinosaurs &amp; Rocks</li>
+          </ul>
+        </div>
+      </article>
+      <article class="mm-card">
+        <img class="mm-photo" src="../images/btu-mischief-makers-34.jpg" alt="Photo for Hunter Allen-Bonney" loading="lazy">
+        <div class="mm-person">
+          <h3>Hunter Allen-Bonney</h3>
+          <p class="mm-role">Graduate Student, ATLAS Institute</p>
+          <p class="mm-email"><a href="mailto:Hunter.allenbonney@colorado.edu">Hunter.allenbonney@colorado.edu</a></p>
+          <ul class="mm-skills">
+            <li>Photography</li>
+            <li>Documentation</li>
+            <li>ATLAS Social Media</li>
+          </ul>
+        </div>
+      </article>
+      <article class="mm-card">
+        <img class="mm-photo" src="../images/btu-mischief-makers-35.jpg" alt="Photo for S Wu" loading="lazy">
+        <div class="mm-person">
+          <h3>S Wu</h3>
+          <p class="mm-role">PhD Student, ATLAS Institute (currently in Canada!)</p>
+          <p class="mm-email"><a href="mailto:shanel.wu@colorado.edu">shanel.wu@colorado.edu</a></p>
+          <p class="mm-skill-title">Ask me about:</p>
+          <ul class="mm-skills">
+            <li>Anything textiles/yarn</li>
+            <li>Electronics + circuits</li>
+            <li>General tools</li>
+            <li>Debugging code</li>
+            <li>Brainstorming + prototyping</li>
+            <li>How to survive academic writing</li>
+            <li>A strange smattering of many other things</li>
+          </ul>
+        </div>
+      </article>
+      <article class="mm-card">
+        <img class="mm-photo" src="../images/btu-mischief-makers-36.jpg" alt="Photo for McClain Martensen" loading="lazy">
+        <div class="mm-person">
+          <h3>McClain Martensen</h3>
+          <p class="mm-role">Undergraduate Student, ATLAS Institute (Graduated!)</p>
+          <p class="mm-email"><a href="mailto:moma0500@colorado.edu">moma0500@colorado.edu</a></p>
+          <p class="mm-skill-title">Things I know:</p>
+          <ul class="mm-skills">
+            <li>3D printing</li>
+            <li>3D modelling</li>
+            <li>Woodshop</li>
+            <li>Electronics/Soldering</li>
+            <li>Sewing/Textiles</li>
+            <li>Prototyping</li>
+          </ul>
+        </div>
+      </article>
+      <article class="mm-card">
+        <img class="mm-photo" src="../images/btu-mischief-makers-37.jpg" alt="Photo for Gray Assi" loading="lazy">
+        <div class="mm-person">
+          <h3>Gray Assi</h3>
+          <p class="mm-role">CTD Undergraduate Student, ATLAS Institute (Graduated!)</p>
+          <p class="mm-email"><a href="mailto:gray.assi@colorado.edu">gray.assi@colorado.edu</a></p>
+          <p class="mm-skill-title">Ask me about:</p>
+          <ul class="mm-skills">
+            <li>prototyping</li>
+            <li>experience design</li>
+            <li>sewing + textiles</li>
+            <li>soldering + electronics</li>
+          </ul>
+        </div>
+      </article>
+      <article class="mm-card">
+        <img class="mm-photo" src="../images/btu-mischief-makers-38.jpg" alt="Photo for Dover Horesh" loading="lazy">
+        <div class="mm-person">
+          <h3>Dover Horesh</h3>
+          <p class="mm-role">Graduate Student, ATLAS Institute (Graduated!)</p>
+          <p class="mm-email"><a href="mailto:diho2148@colorado.edu">diho2148@colorado.edu</a></p>
+          <p class="mm-skill-title">I work magic with:</p>
+          <ul class="mm-skills">
+            <li>Laser Cutter (Lazor Wizard)</li>
+            <li>Wood Shop</li>
+            <li>Sewing Machine</li>
+            <li>Photography</li>
+          </ul>
+        </div>
+      </article>
+      <article class="mm-card">
+        <img class="mm-photo" src="../images/btu-mischief-makers-39.jpg" alt="Photo for Katie Gilchrist" loading="lazy">
+        <div class="mm-person">
+          <h3>Katie Gilchrist</h3>
+          <p class="mm-role">Graduate Student, ATLAS Institute (Graduated!)</p>
+          <p class="mm-email"><a href="mailto:kagi6366@colorado.edu">kagi6366@colorado.edu</a></p>
+          <p class="mm-skill-title">I can do the things:</p>
+          <ul class="mm-skills">
+            <li>Basic Tools</li>
+            <li>Soldering &amp; Electronics</li>
+            <li>Code</li>
+            <li>3D Modeling</li>
+            <li>More as I learn them!</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+<script src="../js/site.js" defer></script>
 </body>
 </html>
